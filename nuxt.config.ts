@@ -1,0 +1,14 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+	devtools: { enabled: true },
+	build: {
+		transpile: ['vue-clerk', '@clerk/clerk-js'],
+	},
+	runtimeConfig: {
+		public: {
+			clerkPublishableKey: process.env.CLERK_PUBLISHABLE_KEY,
+			supabaseUrl: process.env.SUPABASE_URL,
+			supabaseAnonKey: process.env.SUPABASE_KEY,
+		},
+	},
+});
