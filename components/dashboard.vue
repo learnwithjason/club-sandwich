@@ -107,13 +107,6 @@ async function copyToClipboard() {
 		copied.value = false;
 	}, 2000);
 }
-
-useSeoMeta({
-	title: 'Club Sandwich',
-	description: `${user.value?.firstName} is inviting you to Club Sandwich.`,
-	ogImage: imgSrc.value,
-	twitterCard: 'summary_large_image',
-});
 </script>
 
 <template>

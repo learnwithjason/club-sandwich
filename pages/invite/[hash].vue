@@ -1,18 +1,19 @@
 <script setup lang="ts">
 const route = useRoute();
+const hash = String(route.params.hash);
 
 const url = process.env.DEV
 	? 'http://localhost:3000'
 	: 'https://club-sandwich.lwj.dev';
 
-useSeoMeta({
+useServerSeoMeta({
 	title: 'Club Sandwich',
 });
 </script>
 
 <template>
 	<div class="content">
-		<Invite :url="url" :inviteHash="route.params.hash" />
+		<Invite :url="url" :inviteHash="hash" />
 	</div>
 </template>
 

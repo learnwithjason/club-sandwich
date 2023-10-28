@@ -15,7 +15,7 @@ onMounted(() => {
 	}
 });
 
-useSeoMeta({
+useServerSeoMeta({
 	title: 'Club Sandwich',
 });
 </script>

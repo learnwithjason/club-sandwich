@@ -19,7 +19,7 @@ async function checkForInviteId() {
 
 		imageUrl.value = data.image_url;
 
-		useSeoMeta({
+		useServerSeoMeta({
 			title: 'You’re invited you to Club Sandwich.',
 			ogImage: imageUrl.value,
 			twitterCard: 'summary_large_image',
