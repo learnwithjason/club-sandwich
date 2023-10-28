@@ -4,6 +4,11 @@ export default defineNuxtConfig({
 	build: {
 		transpile: ['vue-clerk', '@clerk/clerk-js'],
 	},
+	app: {
+		head: {
+			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
+		},
+	},
 	runtimeConfig: {
 		public: {
 			clerkPublishableKey: process.env.CLERK_PUBLISHABLE_KEY,
