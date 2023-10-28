@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const route = useRoute();
 const hash = String(route.params.hash);
+const imageUrl = atob(hash);
 
 const url = process.env.DEV
 	? 'http://localhost:3000'
@@ -8,6 +9,8 @@ const url = process.env.DEV
 
 useServerSeoMeta({
 	title: 'Club Sandwich',
+	ogImage: imageUrl,
+	twitterCard: 'summary_large_image',
 });
 </script>
 

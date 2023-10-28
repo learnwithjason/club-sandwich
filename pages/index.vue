@@ -17,6 +17,7 @@ onMounted(() => {
 
 useServerSeoMeta({
 	title: 'Club Sandwich',
+	description: 'A place where everyone — and everything — can be a sandwich.',
 });
 </script>
 

@@ -3,31 +3,7 @@ import { SignUpButton } from 'vue-clerk';
 
 const props = defineProps<{ url: string; inviteHash: string }>();
 
-const supabase = getSupabaseClient(null);
-
-const imageUrl = ref<string>();
-
-async function checkForInviteId() {
-	const inviteHash = props.inviteHash;
-	if (inviteHash) {
-		const user_id = atob(inviteHash);
-		const { data } = await supabase
-			.from('invitations')
-			.select()
-			.eq('user_id', user_id)
-			.maybeSingle();
-
-		imageUrl.value = data.image_url;
-
-		useServerSeoMeta({
-			title: 'You’re invited you to Club Sandwich.',
-			ogImage: imageUrl.value,
-			twitterCard: 'summary_large_image',
-		});
-	}
-}
-
-checkForInviteId();
+const imageUrl = atob(props.inviteHash);
 </script>
 
 <template>
