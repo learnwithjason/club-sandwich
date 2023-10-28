@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { SignUpButton } from 'vue-clerk';
 
-const props = defineProps<{ url: string; inviteHash: string }>();
-
-const imageUrl = atob(props.inviteHash);
+defineProps<{ url: string; imageUrl?: string }>();
 </script>
 
 <template>

@@ -26,7 +26,7 @@ const favoriteSandwich = computed(() => {
  * Create a hash of the invite image URL for sharing
  */
 const inviteHash = computed(() => {
-	return btoa(imgSrc.value);
+	return btoa(user.value?.id ?? '');
 });
 
 const inviteUrl = computed(() => {
